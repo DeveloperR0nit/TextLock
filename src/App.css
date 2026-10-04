@@ -50,7 +50,7 @@ h1 span {
   line-height: calc(26 / 16);
   max-width: 672px;
   text-align: center;
-  margin: 0 auto 24px;
+  margin: 0 auto 40px;
 }
 .io-sec {
   display: flex;
@@ -58,7 +58,7 @@ h1 span {
   gap: 16px;
 }
 .io-sec .text-box {
-  max-width: 470px;
+  width: 50%;
   flex-grow: 1;
 }
 .io-sec .top-text {
@@ -70,6 +70,11 @@ h1 span {
   justify-content: space-between;
   background: #262a34;
   border-radius: 8px 8px 0 0;
+}
+.io-sec .buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .io-sec .top-text-btn {
   display: flex;
@@ -94,7 +99,7 @@ h1 span {
   padding: 16px;
   height: 286px;
   color: #dfe2ef;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "JetBrains Mono", monospace;
   font-size: 14px;
   font-weight: 500;
 }
@@ -105,37 +110,6 @@ h1 span {
   font-family: "JetBrains Mono", monospace;
   color: rgba(187, 202, 191, 40%);
   font-size: 13px;
-}
-.io-sec .buttons button {
-  cursor: pointer;
-  background: #31353f;
-  color: #4cd7f6;
-  border: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  height: 54.5px;
-  width: 178px;
-  justify-content: center;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  border-radius: 8px;
-  transition: 0.4s ease all;
-}
-.io-sec .buttons button path {
-  fill: #4cd7f6;
-  transition: 0.4s ease all;
-}
-.io-sec .encrypt {
-  margin-bottom: 8px;
-}
-.io-sec .buttons button.active {
-  background: #4edea3;
-  color: #003824;
-}
-.io-sec .buttons button.active path {
-  fill: #003824;
 }
 .io-sec .Copy-btn {
   background: #4edea3;
@@ -218,29 +192,16 @@ h1 span {
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
-  .io-sec .buttons button {
-    width: 120px;
-  }
   .io-sec {
     gap: 8px;
   }
-}
-@media screen and (max-width: 576px) {
   .io-sec {
     flex-direction: column;
     gap: 16px;
   }
   .io-sec .text-box {
     width: 100%;
-  }
-  .io-sec .buttons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-  }
-  .io-sec .encrypt {
-    margin-bottom: 0;
+    max-width: 550px;
   }
   main {
     padding: 25px 0 40px;
@@ -265,7 +226,10 @@ h1 span {
   .header-sec {
     padding: 8px 10px;
   }
-  .io-sec .buttons button {
-    height: 40px;
+  .io-sec textarea::placeholder {
+    font-size: 10px;
+  }
+  .io-sec .buttons {
+    gap: 8px;
   }
 }
