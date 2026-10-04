@@ -227,7 +227,7 @@ h1 span {
     padding: 8px 10px;
   }
   .io-sec textarea::placeholder {
-    font-size: 10px;
+    font-size: 12px;
   }
   .io-sec .buttons {
     gap: 8px;
